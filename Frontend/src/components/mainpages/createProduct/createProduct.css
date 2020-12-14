@@ -1,0 +1,116 @@
+.create_product {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.upload {
+  max-width: 450px;
+  height: 500px;
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 20px;
+  position: relative;
+}
+#file_up {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+#file_up::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: white;
+  font-size: 17rem;
+  text-align: center;
+  cursor: pointer;
+  margin: auto;
+}
+.upload_icon {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 180px;
+  top: 200px;
+  cursor: pointer;
+}
+#file_img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+}
+#file_img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: scale-down;
+}
+#file_img span {
+  position: absolute;
+  top: -13px;
+  right: -13px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-weight: 900;
+  color: crimson;
+}
+
+.create_product form {
+  max-width: 500px;
+  min-width: 290px;
+  width: 100%;
+  margin: 15px 30px;
+}
+.create_product form .row {
+  width: 100%;
+  margin: 15px 0;
+}
+.create_product form input,
+textarea {
+  outline: none;
+  width: 100%;
+  min-height: 40px;
+  padding: 0 5px;
+  border: 1px solid grey;
+  border-radius: 6px;
+}
+.create_product form button {
+  width: 200px;
+  height: 40px;
+  background: #555;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.upload h3 {
+  text-align: center;
+  font-weight: 500;
+  margin-top: 30px;
+}
+.upload p {
+  color: grey;
+  text-align: center;
+  font-size: 0.8rem;
+}
+select {
+  padding-right: 4px;
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid grey;
+  border-radius: 5px;
+}

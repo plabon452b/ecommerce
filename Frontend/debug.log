@@ -1,0 +1,6 @@
+[1209/142652.956:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1209/150600.884:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1209/155458.269:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\Sakib Hasan Plabon\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\7e2b20b6-3042-4ba5-bb5c-f7c04054280a: The system cannot find the path specified. (0x3)
+[1210/114627.811:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1211/153958.261:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1214/122221.756:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
