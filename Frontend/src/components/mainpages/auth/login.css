@@ -5,7 +5,7 @@
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   border-radius: 10px;
   padding: 30px;
-  margin: 50px auto;
+  margin: 50px auto 600px auto;
 }
 .login-page h2 {
   text-transform: uppercase;

@@ -1,5 +1,6 @@
 .history-page {
   overflow-x: auto;
+  min-height: 800px;
 }
 .history-page h2,
 h4 {

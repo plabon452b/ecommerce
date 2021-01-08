@@ -50,3 +50,8 @@
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+
+.rp_header {
+  font-weight: 500;
+  margin-top: 20px;
+}

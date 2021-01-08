@@ -1,5 +1,6 @@
 .categories {
   max-width: 700px;
+  min-height: 740px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;

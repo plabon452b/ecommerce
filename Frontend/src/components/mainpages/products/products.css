@@ -61,8 +61,11 @@ input {
   text-align: center;
 }
 .load_more button {
-  padding: 10px 25px;
+  padding: 6px 20px;
   margin-bottom: 20px;
-  border: 1px solid #555;
-  text-transform: capitalize;
+  font-size: 1rem;
+  border: 1px solid grey;
+}
+.load_more button:hover {
+  padding: 6px 26px;
 }
