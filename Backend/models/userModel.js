@@ -16,11 +16,22 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    address: {
+      type: String,
+    },
+    phone: {
+      type: String,
+    },
+
     role: {
       type: Number, //1 for admin 0 for user
       default: 0,
     },
     cart: {
+      type: Array,
+      default: [],
+    },
+    favourites: {
       type: Array,
       default: [],
     },

@@ -1,6 +1,5 @@
 {
   "env": {
-    "MONGODB_URL": "mongodb+srv://pablo:19271185@cluster0.fujko.mongodb.net/<dbname>?retryWrites=true&w=majority",
     "ACCESS_TOKEN_SECRET": "uU5vY4wJ1uW8iT0vE8vZ4kV7aY4iW3eW",
     "REFRESH_TOKEN_SECRET": "dA6oK4gM8xP7oA0iJ1cZ8pL0xB7vL4tG",
     "CLOUD_NAME": "dmvk8b4eq",

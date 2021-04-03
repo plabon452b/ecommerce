@@ -2,16 +2,14 @@
   "name": "ecommerce",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "14.12.0"
+  },
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
-    "client": "cd client && npm run start",
-    "server-install": "npm install",
-    "client-install": "cd client && npm install",
-    "install-all": "concurrently \"npm run server-install\" \"npm run client-install\"",
-    "dev": "nodemon server.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",

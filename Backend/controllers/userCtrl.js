@@ -63,9 +63,9 @@ const userCtrl = {
         maxAge: 7 * 24 * 60 * 60 * 1000, // 7d
       });
 
-      res.json({ accesstoken });
+      res.json({ accesstoken, user });
     } catch (err) {
-      return res.status(500).json({ msg: err.message });
+      return res.status(500).json({ msg: "eta" + err.message });
     }
   },
   logout: async (req, res) => {
@@ -104,6 +104,27 @@ const userCtrl = {
       return res.status(500).json({ msg: err.message });
     }
   },
+  updateUser: async (req, res) => {
+    const updateData = req.body;
+    try {
+      const user = await Users.findById(req.user.id).select("-password");
+      if (!user) return res.status(400).json({ msg: "User does not exist." });
+      if (updateData.name) {
+        let abc = await Users.updateOne(
+          {
+            _id: user._id,
+          },
+          {
+            $set: updateData,
+          }
+        );
+      }
+      res.json({ msg: "success" });
+    } catch (err) {
+      return res.status(500).json({ msg: err.message });
+    }
+  },
+
   addCart: async (req, res) => {
     try {
       const user = await Users.findById(req.user.id);
@@ -121,6 +142,24 @@ const userCtrl = {
       return res.status(500).json({ msg: err.message });
     }
   },
+
+  addFavourites: async (req, res) => {
+    try {
+      const user = await Users.findById(req.user.id);
+      if (!user) return res.status(400).json({ msg: "User does not exist." });
+
+      await Users.findOneAndUpdate(
+        { _id: req.user.id },
+        {
+          favourites: req.body.favourites,
+        }
+      );
+
+      return res.json({ msg: "Added to Wishlist" });
+    } catch (err) {
+      return res.status(500).json({ msg: err.message });
+    }
+  },
   history: async (req, res) => {
     try {
       const history = await Payments.find({ user_id: req.user.id });
@@ -133,7 +172,7 @@ const userCtrl = {
 };
 
 const createAccessToken = (user) => {
-  return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: "11m" });
+  return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: "7d" });
 };
 const createRefreshToken = (user) => {
   return jwt.sign(user, process.env.REFRESH_TOKEN_SECRET, { expiresIn: "7d" });
